@@ -193,6 +193,17 @@ class GenerateConfig {
 <entry key="sec-lastname"  value="sn" />
 <entry key="sec-org"       value="o" />
 <entry key="sec-tel"       value="telephoneNumber" />""".replaceAll("\n|\t","")
+            properties['acl.mapping'] = """
+<s:intercept-url pattern=".*\\?.*login.*" access="ROLE_SV_USER,ROLE_SV_EDITOR,ROLE_SV_REVIEWER,ROLE_SV_ADMIN" />
+<s:intercept-url pattern=".*\\?.*casLogin.*" access="ROLE_SV_USER,ROLE_SV_EDITOR,ROLE_SV_REVIEWER,ROLE_SV_ADMIN" />
+<s:intercept-url pattern="/extractorapp/admin/.*" access="ROLE_ADMINISTRATOR" />
+<s:intercept-url pattern="/extractorapp/.*" access="ROLE_MOD_EXTRACTORAPP" />
+<s:intercept-url pattern="/geofence/.*" access="ROLE_ADMINISTRATOR" />
+<s:intercept-url pattern="/analytics/.*" access="ROLE_MOD_ANALYTICS" />
+<s:intercept-url pattern="/ldapadmin/privateui/.*" access="ROLE_MOD_LDAPADMIN" />
+<s:intercept-url pattern="/ldapadmin/private/.*" access="ROLE_MOD_LDAPADMIN" />
+<s:intercept-url pattern="/testPage" access="IS_AUTHENTICATED_FULLY" />
+<s:intercept-url pattern=".*" access="IS_AUTHENTICATED_ANONYMOUSLY,ROLE_SV_USER,ROLE_SV_EDITOR,ROLE_SV_REVIEWER,ROLE_SV_ADMIN" />""".replaceAll("\n|\t","")
             // database health check settings:
             // If the HEALTH CHECK feature is activated, the security proxy monitors db connections.
             properties['checkHealth'] = "false"
