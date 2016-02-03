@@ -21,7 +21,7 @@ shared.instance.name=geOrchestra
 # shared.server.port defaults to 80
 # + example +
 # If your server is http://localhost:8080/ :
-# shared.server.name=localhost
+shared.server.name=test-geodiff
 # shared.server.port=8080
 
 # set shared.url.scheme to https 
@@ -44,7 +44,7 @@ shared.homepage.url=@shared.url.scheme@://@shared.server.name@/
 # May be one of the following: fr, es, en, de
 # Default value: en
 
-shared.language=en
+shared.language=fr
 
 
 # --------------------------------------------------
@@ -60,7 +60,7 @@ shared.header.height=90
 # GEONETWORK
 # --------------------------------------------------
 
-shared.geonetwork.language=eng
+shared.geonetwork.language=fre
 
 # --------------------------------------------------
 # LDAP
@@ -88,7 +88,7 @@ shared.ldap.baseDn=dc=georchestra,dc=org
 shared.ldap.userSearchBaseDN=ou=users
 shared.ldap.groupSearchBaseDN=ou=groups
 shared.ldap.admin.dn=cn=admin,@shared.ldap.baseDn@
-shared.ldap.admin.password=secret
+shared.ldap.admin.password=0357EED
 
 
 # --------------------------------------------------
@@ -111,19 +111,19 @@ shared.privileged.geoserver.pass=gerlsSnFd6SmM
 # and completed extraction requests. Use the following parameters
 # according to your platform smtp gateway
 
-shared.smtp.host=localhost
+shared.smtp.host=smtp.mutu.local
 shared.smtp.port=25
 
 # for emails sent by extractorapp:
 
-shared.email.replyTo=psc\@georchestra.org
-shared.email.from=psc\@georchestra.org
+shared.email.replyTo=sigsupport\@rennesmetropole.fr
+shared.email.from=noreply\@rennesmetropole.org
 
 # the following email receives new account requests if ldapadmin
 # is configured with moderatedSignup = true (which is the default)
 # (have a look at your own GenerateConfig.groovy)
 
-shared.administrator.email=psc\@georchestra.org
+shared.administrator.email=sigsupport\@rennesmetropole.org
 
 # send notification mails in HTML ?
 # Defaults to: false (ie. plain text emails)
@@ -145,7 +145,7 @@ shared.email.html=false
 # Here we use /tmp because we want to prevent this kind of error 
 # http://applis-bretagne.fr/redmine/issues/4311 when Tomcat is not installed
 
-shared.log.dir=/tmp
+shared.log.dir=/var/log/tomcat
 
 
 # --------------------------------------------------
@@ -190,6 +190,6 @@ shared.download_form.pdfurl=
 # all queries to the OGC web services will be logged in a db.
 # see ogc-server-statistics/database.sql
 
-shared.ogc.statistics.activated=false
+shared.ogc.statistics.activated=true
 
 

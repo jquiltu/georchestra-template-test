@@ -8,7 +8,7 @@
  */
 class GenerateConfig {
 
-    def instanceName = "@shared.instance.name@"
+    def instanceName = "geOrchestra"
 
     /**
      * @param project The maven project.  you can get all information about
@@ -78,7 +78,7 @@ class GenerateConfig {
             from: 'defaults/geofence-webapp/WEB-INF/classes',
             to: 'geofence-webapp/WEB-INF/classes'
         ).update { properties ->
-            properties['geofenceGlobalConfiguration.baseLayerURL'] = "@shared.url.scheme@://sdi.georchestra.org/geoserver/wms"
+            properties['geofenceGlobalConfiguration.baseLayerURL'] = "@shared.url.scheme@://test-geodiff/geoserver/wms"
             properties['geofenceGlobalConfiguration.baseLayerName'] = "unearthedoutdoors:truemarble"
             properties['geofenceGlobalConfiguration.baseLayerTitle'] = "True Marble"
             properties['geofenceGlobalConfiguration.baseLayerFormat'] = "image/jpeg"
@@ -178,8 +178,8 @@ class GenerateConfig {
         ).update { properties ->
             // ReCaptcha keys for your own domain: 
             // (these are the ones for sdi.georchestra.org, they won't work for you !!!)
-            properties['privateKey'] = "6LcfjucSAAAAAKcnHp14epYOiWOIUfEculd4PvLV"
-            properties['publicKey'] = "6LcfjucSAAAAAKtNoK5r7IIXxBT-33znNJUgeYg1"
+            properties['privateKey'] = "6LdHKxcTAAAAADOZWkt2eh3VgQlF-4SFqYhfXOxF"
+            properties['publicKey'] = "6LdHKxcTAAAAALNKiOcc2o23MS6YKRUa2PNCWHp5"
             // Email subjects:
             properties['subject.account.created'] = "["+instanceName+"] Your account has been created"
             properties['subject.account.in.process'] = "["+instanceName+"] Your new account is waiting for validation"
