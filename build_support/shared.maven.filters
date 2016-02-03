@@ -21,14 +21,14 @@ shared.instance.name=geOrchestra
 # shared.server.port defaults to 80
 # + example +
 # If your server is http://localhost:8080/ :
-shared.server.name=test-geodiff
+# shared.server.name=test-geodiff
 # shared.server.port=8080
 
 # set shared.url.scheme to https 
 # and shared.server.port to 443
 # if your SDI is configured accordingly
 
-shared.server.name=georchestra.mydomain.org
+shared.server.name=test-geodiff
 shared.url.scheme=http
 
 # sets the public address of your homepage.
