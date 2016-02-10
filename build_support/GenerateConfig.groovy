@@ -140,24 +140,24 @@ class GenerateConfig {
             properties['remove.xforwarded.headers'] = "<value>.*geo.admin.ch.*</value>"
             // proxy.mapping 
             properties['proxy.mapping'] = """
-<entry key="analytics"     value="proxyDefaultTarget/analytics/" />
-<entry key="catalogapp"    value="proxyDefaultTarget/catalogapp/" />
-<entry key="downloadform"  value="proxyDefaultTarget/downloadform/" />
-<entry key="extractorapp"  value="proxyDefaultTarget/extractorapp/" />
-<entry key="geonetwork"    value="proxyDefaultTarget/geonetwork/" />
-<entry key="geoserver"     value="geoserverTarget/geoserver/" />
-<entry key="geowebcache"   value="proxyDefaultTarget/geowebcache/" />
-<entry key="geofence"      value="proxyDefaultTarget/geofence/" />
-<entry key="header"        value="proxyDefaultTarget/header/" />
-<entry key="ldapadmin"     value="proxyDefaultTarget/ldapadmin/" />
-<entry key="mapfishapp"    value="proxyDefaultTarget/mapfishapp/" />
-<entry key="static"        value="proxyDefaultTarget/header/" />""".replaceAll("\n|\t","").replaceAll("proxyDefaultTarget",proxyDefaultTarget).replaceAll("geoserverTarget",geoserverTarget)
+            <entry key="analytics"     value="proxyDefaultTarget/analytics/" />
+	     <entry key="catalogapp"    value="proxyDefaultTarget/catalogapp/" />
+            <entry key="downloadform"  value="proxyDefaultTarget/downloadform/" />
+            <entry key="extractorapp"  value="proxyDefaultTarget/extractorapp/" />
+            <entry key="geonetwork"    value="proxyDefaultTarget/geonetwork/" />
+            <entry key="geoserver"     value="http://localhost:8380/geoserver" />
+            <entry key="geowebcache"   value="proxyDefaultTarget/geowebcache/" />
+            <entry key="geofence"      value="proxyDefaultTarget/geofence/" />
+            <entry key="header"        value="proxyDefaultTarget/header/" />
+            <entry key="ldapadmin"     value="proxyDefaultTarget/ldapadmin/" />
+            <entry key="mapfishapp"    value="proxyDefaultTarget/mapfishapp/" />
+            <entry key="static"        value="proxyDefaultTarget/header/" />""".replaceAll("\n|\t","").replaceAll("proxyDefaultTarget",proxyDefaultTarget).replaceAll("geoserverTarget",geoserverTarget)
             properties['header.mapping'] = """
-<entry key="sec-email"     value="mail" />
-<entry key="sec-firstname" value="givenName" />
-<entry key="sec-lastname"  value="sn" />
-<entry key="sec-org"       value="o" />
-<entry key="sec-tel"       value="telephoneNumber" />""".replaceAll("\n|\t","")
+            <entry key="sec-email"     value="mail" />
+            <entry key="sec-firstname" value="givenName" />
+            <entry key="sec-lastname"  value="sn" />
+            <entry key="sec-org"       value="o" />
+            <entry key="sec-tel"       value="telephoneNumber" />""".replaceAll("\n|\t","")
             // database health check settings:
             // If the HEALTH CHECK feature is activated, the security proxy monitors db connections.
             properties['checkHealth'] = "false"
