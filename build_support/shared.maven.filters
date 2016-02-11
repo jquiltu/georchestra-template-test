@@ -29,7 +29,8 @@ shared.instance.name=geOrchestra
 # if your SDI is configured accordingly
 
 shared.server.name=test-geodiff
-shared.url.scheme=http
+shared.url.scheme=https
+shared.server.port=443
 
 # sets the public address of your homepage.
 # Defaults to @shared.url.scheme@://@shared.server.name@/
@@ -117,13 +118,13 @@ shared.smtp.port=25
 # for emails sent by extractorapp:
 
 shared.email.replyTo=sigsupport\@rennesmetropole.fr
-shared.email.from=noreply\@rennesmetropole.org
+shared.email.from=noreply\@rennesmetropole.fr
 
 # the following email receives new account requests if ldapadmin
 # is configured with moderatedSignup = true (which is the default)
 # (have a look at your own GenerateConfig.groovy)
 
-shared.administrator.email=sigsupport\@rennesmetropole.org
+shared.administrator.email=sigsupport\@rennesmetropole.fr
 
 # send notification mails in HTML ?
 # Defaults to: false (ie. plain text emails)
@@ -145,7 +146,7 @@ shared.email.html=false
 # Here we use /tmp because we want to prevent this kind of error 
 # http://applis-bretagne.fr/redmine/issues/4311 when Tomcat is not installed
 
-shared.log.dir=/var/log/tomcat
+shared.log.dir=/var/log/tomcat8
 
 
 # --------------------------------------------------
