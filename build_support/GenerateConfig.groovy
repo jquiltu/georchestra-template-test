@@ -8,7 +8,7 @@
  */
 class GenerateConfig {
 
-    def instanceName = "geOrchestra"
+    def instanceName = "@shared.instance.name@"
 
     /**
      * @param project The maven project.  you can get all information about
